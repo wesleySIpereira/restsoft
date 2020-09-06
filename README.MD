@@ -26,7 +26,9 @@ Sistemas de Informação.
 	'password' => 'sua_senha',
 	'database' => 'restsoft', //nome do banco caso altere somente mudar aqui.
 	
-	Criar o banco de dados  e importar o arquivo sql da pasta  BANCO DADOS
+	Criar o banco de dados  e importar o arquivo sql da pasta  BANCO DADOS 
+	
+	login: admin senha: admin
 	</body>
    
 </html>
