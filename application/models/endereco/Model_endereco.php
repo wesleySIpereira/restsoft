@@ -46,5 +46,9 @@ class Model_endereco extends CI_Model {
 
         return $this->db->query("select * from  visao_endereco where id_rua='$rua_nome' and idbairro='$idbairro' and end_rua='$end_rua'")->result();
     }
+    public function atualiza_endereco($dados,$where) {
+        $this->db->where(array('id_endereco'=>$where));
+      return  $this->db->update('tb_endereco', $dados);
+    }
 
 }

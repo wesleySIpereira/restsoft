@@ -22,5 +22,9 @@ class Model_pessoa extends CI_Model {
     public function lista_pessoa($nome,$idendereco) {
       return  $this->db->query("select id_pessoa from tb_pessoa where  pessoa_nome='$nome' and c_idendereco='$idendereco'")->result();
     } 
-    
+    public function atualiza_pessoa($data,$where) {
+        $this->db->where(array('id_pessoa'=>$where));
+      return  $this->db->update('tb_pessoa', $data);
+        
+    }
 }

@@ -9,7 +9,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="<?php echo base_url('index.php/painel'); ?>"><?php echo $Titulo; ?></a>
+                <a class="navbar-brand" href="<?php echo base_url('index.php'); ?>"><?php echo $Titulo; ?></a>
             </div>
             <!-- /.navbar-header -->
 
@@ -209,12 +209,12 @@
                         <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> <?php echo $this->session->userdata('funcionario_nome'); ?></a>
                         </li>
-                        <li><a href="<?php echo base_url('index.php/painel/config'); ?>"><i class="fa fa-gear fa-fw"></i> Configuração</a>
+                        <li><a href="<?php echo base_url('#'); ?>"><i class="fa fa-gear fa-fw"></i> Configuração</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="<?php echo base_url('index.php/inicio/sair'); ?> "><i class="fa fa-sign-out fa-fw"></i> Sair</a>
+                        <li><a href="<?php echo base_url('index.php/login/sair'); ?> "><i class="fa fa-sign-out fa-fw"></i> Sair</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->

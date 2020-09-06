@@ -34,12 +34,14 @@
 <script>
     $(document).ready(function () {
         $('#lista_clientes').DataTable({
+            
             "language": {
                 "lengthMenu": "Mostrando  _MENU_  registros por página",
                 "zeroRecords": "Nada encontrado",
                 "info": "Mostrando página  _PAGE_  de  _PAGES_",
                 "infoEmpty": "Nenhum registro disponível",
                 "search": "Buscar:",
+                "sInfo": "Exibindo de _START_ a _END_ de _TOTAL_ registros",
                 "paginate": {
                     "first": "<<",
                     "last": ">>",

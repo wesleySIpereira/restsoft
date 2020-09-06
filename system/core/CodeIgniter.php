@@ -55,8 +55,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @var	string
  *
  */
-	const CI_VERSION = '3.1.4';
-
+	//const CI_VERSION = '3.1.4';
+       define('CI_VERSION', '3.1.4');
 /*
  * ------------------------------------------------------
  *  Load the framework constants

@@ -14,7 +14,8 @@ class Model_cliente extends CI_Model {
     }
 
     public function totalCliente() {
-        return $this->db->count_all('visao_cliente');
+        $this->db->where(array('cli_estatus' => 'ATIVO'));
+        return $this->db->get('visao_cliente')->num_rows();
     }
 
     public function verificaUnicidade($dados) {
@@ -23,6 +24,24 @@ class Model_cliente extends CI_Model {
 
     public function salva_cliente($dados) {
         return $this->db->insert('tb_cliente', $dados);
+    }
+    public function listaClienteEdit($id=null) {
+        $this->db->where(array('cli_estatus' => 'ATIVO','id_cliente'=>$id));
+        return $this->db->get('visao_cliente')->result();
+    }
+    public function atualiza_cliente($dados,$where) {
+        
+        $this->db->where(array('id_cliente'=>$where));
+
+       $this->db->update('tb_cliente', $dados);
+       return true;
+    }
+    public function update_cliente($dados,$where) {
+        
+    }
+    public function pegaDadosCliente($where) {
+        $this->db->where(array('id_cliente' => $where));
+        return $this->db->get('visao_cliente')->result();
     }
 
 }

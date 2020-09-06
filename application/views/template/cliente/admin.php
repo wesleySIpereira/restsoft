@@ -5,10 +5,24 @@
                         <div class="col-lg-12">
                             <h3 class="page-header text-center success " >Clientes</h3>
                         </div>
+                        
+                      
+                        
                         <!--Tablela simples -->
                         <div class="row">
                             <div class="col-lg-12">
-
+                                  <?php  if(isset($atualizado)and $atualizado=='sim'){?>
+                       <div class="alert alert-success alert-dismissable">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="fa fa-remove"></i> </button>
+                                <center> Cliente Atualizado!</center>
+                            </div>
+                        <?php  } ?>
+                                     <?php  if(isset($deletado)and $deletado=='sim'){?>
+                       <div class="alert alert-danger alert-dismissable">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="fa fa-remove"></i> </button>
+                                <center> Cliente Deletado!</center>
+                            </div>
+                        <?php  } ?>
                                
                                     <div class="panel-heading">
                                         <div class="search">
@@ -20,7 +34,7 @@
                                     </div>
                                         </div>
                                          <!-- /.panel-heading -->
-                                         <div class="table-responsive">
+                                       <!--  <div class="table-responsive"> -->
                                          <table width="100%" class="table table-striped table-bordered table-hover" id="lista_clientes">
                                 <thead>
                                     <tr>
@@ -46,7 +60,7 @@
                                                 <td><?php echo $dcliente->nm_bairro; ?></td>
                                                 <td><?php echo $dcliente->nm_rua; ?></td>
                                                 <td><?php echo $dcliente->rua; ?></td>
-                                                <td><a href="<?php echo base_url('index.php/cliente/editar/'.$dcliente->id_cliente.'') ?>" title="Editar" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i> Editar</a></td>
+                                                <td><a href="<?php echo base_url('index.php/cliente/editar/'.$dcliente->id_cliente.'') ?>" title="Editar" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i> Editar</a>
                                                 <td><a href="<?php echo base_url('index.php/cliente/excluir/'.$dcliente->id_cliente.'') ?>" title="Excluir" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a></td>
                                                 <?php echo '</tr>'; }} ?>
                                                 </tbody>
@@ -55,7 +69,7 @@
                                                 
                                             </table>
                                            
-                                        </div>
+                                     <!--  </div> -->
                                         <!-- /.table-responsive -->
                                         <?php //  echo "<div class='paginate_button'>".$links_paginacao."</div>";?>
                                     

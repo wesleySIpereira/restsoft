@@ -35,16 +35,17 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <i class="fa fa-tasks fa-4x"></i>
+                                    <i class="fa fa fa-check fa-4x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">12</div>
+                                    <div class="huge"><?php echo $e_finalizadas; ?> </div>
                                     <div>Entregas finalizadas</div>
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                          <a href="<?php echo base_url('index.php/pedido/visualiza-pedido');?>"> 
                             <div class="panel-footer">
+                               
                                 <span class="pull-left">Ver detalhes</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                 <div class="clearfix"></div>
@@ -60,13 +61,14 @@
                                     <i class="fa fa-shopping-cart fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">15</div>
-                                    <div>Entregas em Curso</div>
+                                    <div class="huge"><?php echo $a_entregar; ?></div>
+                                    <div>Entregando </div>
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="<?php echo base_url('index.php/pedido/visualiza-pedido');?>"> 
                             <div class="panel-footer">
+                                 
                                 <span class="pull-left">Ver detalhes</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                 <div class="clearfix"></div>
@@ -82,13 +84,14 @@
                                     <i class="fa fa-support fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">13</div>
+                                    <div class="huge"><?php echo $entregas; ?></div>
                                     <div>Pedidos em espera</div>
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="<?php echo base_url('index.php/pedido/visualiza-pedido');?>"> 
                             <div class="panel-footer">
+                                 
                                 <span class="pull-left">Ver detalhes</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                 <div class="clearfix"></div>
